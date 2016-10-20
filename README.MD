@@ -1,8 +1,8 @@
-# 广西水利电力职业技术学院-多媒体教室报修系统
+# 广西水利电力职业技术学院-多媒体教室报修平台
 
 ## 简介
 
-此系统主要采用了 vue2 + thinkcmf开发的单页面应用
+此平台主要采用了 `vue2` + `thinkcmf` 开发的单页面应用
 
 ## 技术栈
 
@@ -20,15 +20,17 @@
 
 ### 前台界面
 
-![首页](preview/Screenshot_2016-10-20-17-38-21-658_com.tencent.mm.png)
 
-![选择](preview/Screenshot_2016-10-20-17-38-34-274_com.tencent.mm.png)
+<img src="preview/Screenshot_2016-10-20-17-38-21-658_com.tencent.mm.png" width = "30%" />
 
-![查询](preview/Screenshot_2016-10-20-17-39-46-839_com.tencent.mm.png)
+<img src="preview/Screenshot_2016-10-20-17-38-34-274_com.tencent.mm.png" width = "30%" />
 
-![查询结果](preview/Screenshot_2016-10-20-17-39-53-920_com.tencent.mm.png)
+<img src="preview/Screenshot_2016-10-20-17-39-46-839_com.tencent.mm.png" width = "30%" />
 
-![详情](preview/Screenshot_2016-10-20-17-39-55-929_com.tencent.mm.png)
+<img src="preview/Screenshot_2016-10-20-17-39-53-920_com.tencent.mm.png" width = "30%" />
+
+<img src="preview/Screenshot_2016-10-20-17-39-55-929_com.tencent.mm.png" width = "30%" />
+
 
 ### 后台界面
 
