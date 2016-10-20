@@ -20,15 +20,15 @@
 
 ### 前台界面
 
-![首页](preview/Screenshot_2016-10-20-17-38-21-658_com.tencent.mm.png =100)
+![首页](preview/Screenshot_2016-10-20-17-38-21-658_com.tencent.mm.png)
 
-![选择](preview/Screenshot_2016-10-20-17-38-34-274_com.tencent.mm.png =100)
+![选择](preview/Screenshot_2016-10-20-17-38-34-274_com.tencent.mm.png)
 
-![查询](preview/Screenshot_2016-10-20-17-39-46-839_com.tencent.mm.png =100)
+![查询](preview/Screenshot_2016-10-20-17-39-46-839_com.tencent.mm.png)
 
-![查询结果](preview/Screenshot_2016-10-20-17-39-53-920_com.tencent.mm.png =100)
+![查询结果](preview/Screenshot_2016-10-20-17-39-53-920_com.tencent.mm.png)
 
-![详情](preview/Screenshot_2016-10-20-17-39-55-929_com.tencent.mm.png =100)
+![详情](preview/Screenshot_2016-10-20-17-39-55-929_com.tencent.mm.png)
 
 ### 后台界面
 
