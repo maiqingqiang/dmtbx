@@ -1,0 +1,28 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('Device/index')}">{:L('DEVICE_LIST')}</a></li>
+			<li><a href="{:U('Device/add')}">{:L('ADD_DEVICE')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form" action="{:U('Device/edit_post')}">
+			<fieldset>
+				<div class="control-group">
+					<label class="control-label">{:L('TITLE')}</label>
+					<div class="controls">
+						<input type="hidden" name="id" value="{$id}">
+						<input type="text" name="title" value="{$title}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+			</fieldset>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary js-ajax-submit">{:L('SAVE')}</button>
+				<a class="btn" href="{:U('Device/index')}">{:L('BACK')}</a>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('building/index')}">{:L('BUILDING_LIST')}</a></li>
+			<li><a href="{:U('building/add')}">{:L('ADD_BUILDING')}</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form" method="post">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th width="30">No.</th>
+						<th width="80">{:L('CAMPUS_TITLE')}</th>
+						<th width="80">{:L('TITLE')}</th>
+						<th>{:L('ROOM_NUMBER')}</th>
+						<th width="120">{:L('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<foreach name="building" item="vo" key="i">
+				<tr>
+					<td>{$i+1}</td>
+					<td>{$vo.campus_title}</td>
+					<td>{$vo.title}</td>
+					<td>{:room_json_to_str($vo['room_number'])}</td>
+					<td>
+						<a href="{:U('building/edit',array('id'=>$vo['id']))}">{:L('EDIT')}</a>|
+						<a href="{:U('building/delete',array('id'=>$vo['id']))}" class="js-ajax-delete">{:L('DELETE')}</a>
+					</td>
+				</tr>
+				</foreach>
+			</table>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

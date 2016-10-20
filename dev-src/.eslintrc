@@ -1,0 +1,28 @@
+{
+  root: true,
+  parser: 'babel-eslint',
+  parserOptions: {
+    sourceType: 'module'
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jasmine": true
+  },
+  extends: 'airbnb-base',
+  plugins: [
+    'html'
+  ],
+  "globals": {
+    require: true,
+  },
+  'rules': {
+    'import/no-unresolved': 0,
+    'linebreak-style': 0,
+    'no-global-assign': 0,
+    'no-unsafe-negation':0,
+    'import/no-extraneous-dependencies': 0,
+    'no-param-reassign': 0,
+    'global-require': 0,
+  }
+}

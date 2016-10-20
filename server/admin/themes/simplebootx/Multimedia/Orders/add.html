@@ -1,0 +1,46 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('building/index')}">{:L('BUILDING_LIST')}</a></li>
+			<li class="active"><a href="{:U('building/add')}">{:L('ADD_BUILDING')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form" action="{:U('building/add_post')}">
+			<fieldset>
+				<div class="control-group">
+					<label class="control-label">{:L('CAMPUS_SELECT')}</label>
+					<div class="controls">
+						<select name="campus_id">
+							{$select_campus}
+						</select>
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">{:L('TITLE')}</label>
+					<div class="controls">
+						<input type="text" name="title">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">{:L('ROOM_NUMBER')}</label>
+					<div class="controls">
+						<textarea name="room_number" style="width: 90%" rows="10"></textarea>
+						<span class="form-required">*</span>
+					<div>这里填写房号，可填写多个房号，多个房号中间需要英文逗号（,）间隔开。例如：101,102,103……</div>
+					<div>单个房号无需逗号</div>
+					<div style="color: red">多房号必须是英文逗号，否则前台会无法显示</div>
+					</div>
+				</div>
+			</fieldset>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary js-ajax-submit">{:L('ADD')}</button>
+				<a class="btn" href="{:U('navcat/index')}">{:L('BACK')}</a>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

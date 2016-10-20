@@ -1,0 +1,33 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('campus/index')}">{:L('CAMPUS_LIST')}</a></li>
+			<li><a href="{:U('campus/add')}">{:L('ADD_CAMPUS')}</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form" method="post">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th width="100">{:L('No')}</th>
+						<th>{:L('TITLE')}</th>
+						<th width="120">{:L('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<foreach name="campus" item="vo" key="i">
+				<tr>
+					<td>{$i+1}</td>
+					<td>{$vo.title}</td>
+					<td>
+						<a href="{:U('campus/edit',array('id'=>$vo['id']))}">{:L('EDIT')}</a>|
+						<a href="{:U('campus/delete',array('id'=>$vo['id']))}" class="js-ajax-delete">{:L('DELETE')}</a>
+					</td>
+				</tr>
+				</foreach>
+			</table>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

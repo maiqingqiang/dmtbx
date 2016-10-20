@@ -1,0 +1,79 @@
+<admintpl file="header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#">{:L('ORDERS_LIST')}</a></li>
+    </ul>
+    <form class="form-horizontal js-ajax-form" method="post">
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th width="30">No.</th>
+                <th width="40">{:L('NAME')}</th>
+                <th width="80">{:L('PHONE')}</th>
+                <th width="50">{:L('CAMPUS_TITLE')}</th>
+                <th width="65">{:L('BUILDING_TITLE')}</th>
+                <th width="30">{:L('DEVICE')}</th>
+                <th>{:L('DESCRIPTION')}</th>
+                <th width="60">{:L('CREATETIME')}</th>
+                <th width="40">{:L('USERNAME')}</th>
+                <th width="40">状态</th>
+                <th>{:L('STATUS')}</th>
+                <th width="60">{:L('ORDER_TIME')}</th>
+                <th width="60">处理时间</th>
+                <th width="60">{:L('ACTIONS')}</th>
+            </tr>
+            </thead>
+            <foreach name="orders" item="vo" key="i">
+                <tr>
+                    <td>{$i+1}</td>
+                    <td>{$vo.name}</td>
+                    <td>{$vo.phone}</td>
+                    <td>{$vo.campus_title}</td>
+                    <td>{$vo.building_title}</td>
+                    <td>{$vo.device_title}</td>
+                    <td>{$vo.description}</td>
+                    <td>{:date('Y-m-d h:i:s',$vo['createtime'])}</td>
+                    <td>{$vo.username}</td>
+                    <td>
+                        <switch name="vo.order_status">
+                            <case value="0">未接单</case>
+                            <case value="1">未处理</case>
+                            <case value="2">已处理</case>
+                        </switch>
+                    </td>
+                    <td>{$vo.status}</td>
+                    <td>
+                        <neq name="vo.order_status" value="0">
+                            {:date('Y-m-d h:i:s',$vo['order_time'])}
+                        </neq>
+                    </td>
+                    <td>
+                        <eq name="vo.order_status" value="2">
+                            {:date('Y-m-d h:i:s',$vo['fix_time'])}
+                        </eq>
+                    </td>
+                    <td>
+                        <switch name="vo.order_status">
+                            <case value="0">
+                                <a href="{:U('Orders/orders_ok',array('id'=>$vo['id']))}" class="js-ajax-order">接单</a> |
+                            </case>
+                            <case value="1">
+                                <a href="{:U('Orders/fix',array('id'=>$vo['id']))}">处理</a> |
+                            </case>
+                            <case value="2">
+                                <a href="{:U('Orders/edit',array('id'=>$vo['id']))}">编辑维护情况</a> |
+                            </case>
+                        </switch>
+                        <a href="{:U('Orders/delete',array('id'=>$vo['id']))}" class="js-ajax-delete">{:L('DELETE')}</a>
+                    </td>
+                </tr>
+            </foreach>
+        </table>
+    </form>
+    <div class="pagination">{$page}</div>
+</div>
+<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

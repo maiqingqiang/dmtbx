@@ -1,0 +1,62 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap">
+	<ul class="nav nav-tabs">
+		<li><a href="#">处理</a></li>
+	</ul>
+	<form method="post" class="form-horizontal js-ajax-form" action="{:U('orders/fix_edit')}">
+		<fieldset>
+			<div class="control-group">
+				<label class="control-label">姓名</label>
+				<div class="controls">
+					<input type="hidden" name="id" value="{$id}">
+					<input type="text" name="title" value="{$name}" readonly>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">手机号码</label>
+				<div class="controls">
+					<input type="text" name="title" value="{$phone}" readonly>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">校区</label>
+				<div class="controls">
+					<input type="text" name="title" value="{$campus_title}" readonly>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">区域</label>
+				<div class="controls">
+					<input type="text" name="title" value="{$building_title}" readonly>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">故障设备</label>
+				<div class="controls">
+					<input type="text" name="title" value="{$device_title}" readonly>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">故障描述</label>
+				<div class="controls">
+					<textarea name="room_number" style="width: 90%" rows="10" readonly>{$description}</textarea>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">维护情况</label>
+				<div class="controls">
+					<textarea name="status" style="width: 90%" rows="10" placeholder="此处填写维护情况，这里可填，可不填">{$status}</textarea>
+				</div>
+			</div>
+		</fieldset>
+		<div class="form-actions">
+			<button type="submit" class="btn btn-primary js-ajax-submit">{:L('SAVE')}</button>
+			<a class="btn" href="{:U('Orders/index')}">{:L('BACK')}</a>
+		</div>
+	</form>
+</div>
+<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

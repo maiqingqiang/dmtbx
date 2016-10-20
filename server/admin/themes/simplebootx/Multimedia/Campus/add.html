@@ -1,0 +1,27 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('campus/index')}">{:L('CAMPUS_LIST')}</a></li>
+			<li class="active"><a href="{:U('campus/add')}">{:L('ADD_CAMPUS')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form" action="{:U('campus/add_post')}">
+			<fieldset>
+				<div class="control-group">
+					<label class="control-label">{:L('TITLE')}</label>
+					<div class="controls">
+						<input type="text" name="title">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+			</fieldset>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary js-ajax-submit">{:L('ADD')}</button>
+				<a class="btn" href="{:U('campus/index')}">{:L('BACK')}</a>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>
